@@ -4,6 +4,8 @@ const cors = require('cors');
 const AuthRouter =require('./auth/authRouter')
 const UserRouter = require ('./../users/userRouter')
 
+const server =express()
+
 server.use(helmet());
 server.use(express.json());
 server.use(cors());

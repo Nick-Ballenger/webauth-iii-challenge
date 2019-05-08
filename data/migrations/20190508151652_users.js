@@ -11,6 +11,7 @@ exports.up = function(knex, Promise) {
         tbl.increments();
         tbl.string('userName', 40).notNullable().unique();
         tbl.string('Password').notNullable();
+        tbl.string('Department')
     })
 };
 
