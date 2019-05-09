@@ -7,7 +7,7 @@ const secret = require('./../../config/dontLookAtMaSecrets')
 
 router.post('/register', (req, res) => {
     let user = req.body;
-    const hash = bcrypt.hashSync(user.password, 8); // 2 ^ n
+    const hash = bcrypt.hashSync(user.password, 8); 
     user.password = hash;
   
     Users.add(user)
@@ -38,6 +38,7 @@ router.post('/register', (req, res) => {
         }
       })
       .catch(error => {
+        console.log(error)
         res.status(500).json(error);
       });
   });
